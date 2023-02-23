@@ -1,0 +1,80 @@
+<div style="display: flex">
+  <div class="card">
+    <div class="card-header">
+      <strong>Paramètres du Sinistre</strong>
+    </div>
+    <div class="card-body">
+      <form #heroForm="ngForm" action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+
+
+
+        <div class="form-group row">
+          <label class="col-md-3 col-form-label" for="text-input1">Policy Number</label>
+          <div class="col-md-9">
+            <input type="text"   name="text-input" class="form-control" [(ngModel)]="contrat.nb_police" placeholder="Numéro de la police ">
+            <span style="color: red" class="help-block1">{{testamount}}</span>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-md-3 col-form-label" for="text-input">Umbrella Limit</label>
+          <div class="col-md-9">
+            <input type="number"  name="text-input" class="form-control" [(ngModel)]="contrat.umbrella" placeholder="Umbrella Limit">
+            <span style="color: red" class="help-block">{{testage}}</span>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-md-3 col-form-label" for="text-input">Vehicles involved</label>
+          <div class="col-md-9">
+            <input type="number"  name="text-input" class="form-control" [(ngModel)]="contrat.vehicules_involved"  placeholder="Nombre de véhicules impliqués">
+            <span style="color: red" class="help-block">{{testn}}</span>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-md-3 col-form-label" for="text-input">Bodily injuries</label>
+          <div class="col-md-9">
+            <input type="number"  name="text-input" class="form-control" [(ngModel)]="contrat.injuries" placeholder="Blessures corporelles">
+            <span style="color: red" class="help-block">{{test}}</span>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-md-3 col-form-label" for="text-input">witnesses</label>
+          <div class="col-md-9">
+            <input type="number"  name="vie"  class="form-control" [(ngModel)]="contrat.witenesses" placeholder="Les témoins">
+            <span style="color: red" class="help-block"></span>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-md-3 col-form-label" for="text-input">Total Claim Amount</label>
+          <div class="col-md-9">
+            <input type="number"  name="vie"  class="form-control" [(ngModel)]="contrat.claimamount" placeholder="Montant total de la réclamation">
+            <span style="color: red" class="help-block">{{testprime}}</span>
+          </div>
+        </div>
+
+
+      </form>
+    </div>
+    <div class="card-footer">
+      <button type="submit" (click)="simulate()" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Simulate</button>
+      <button type="reset" (click)="clean()" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+    </div>
+  </div>
+
+
+  <div class="card">
+    <div class="card-header">
+      <strong>Résultat</strong>
+    </div>
+    <div class="card-body">
+      <form action="" method="post" class="form-inline">
+        <div class="form-group">
+          <label class="col-md-3 col-form-label" >Fraude</label>
+          <h1 style="color: blue"> <br>{{u}}</h1>
+        </div>
+      </form>
+    </div>
+    <div class="card-footer">
+
+    </div>
+  </div>
+
